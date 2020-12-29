@@ -1,0 +1,13 @@
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\bin\Debug\netcoreapp3.1\C sharp battleship.exe
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\bin\Debug\netcoreapp3.1\C sharp battleship.deps.json
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\bin\Debug\netcoreapp3.1\C sharp battleship.runtimeconfig.json
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\bin\Debug\netcoreapp3.1\C sharp battleship.runtimeconfig.dev.json
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\bin\Debug\netcoreapp3.1\C sharp battleship.dll
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\bin\Debug\netcoreapp3.1\C sharp battleship.pdb
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\obj\Debug\netcoreapp3.1\C sharp battleship.csprojAssemblyReference.cache
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\obj\Debug\netcoreapp3.1\C sharp battleship.AssemblyInfoInputs.cache
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\obj\Debug\netcoreapp3.1\C sharp battleship.AssemblyInfo.cs
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\obj\Debug\netcoreapp3.1\C sharp battleship.csproj.CoreCompileInputs.cache
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\obj\Debug\netcoreapp3.1\C sharp battleship.dll
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\obj\Debug\netcoreapp3.1\C sharp battleship.pdb
+C:\Users\Joseh\OneDrive\Desktop\project folder\C sharp battleship\obj\Debug\netcoreapp3.1\C sharp battleship.genruntimeconfig.cache
