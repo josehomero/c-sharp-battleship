@@ -14,14 +14,12 @@ namespace C_sharp_battleship
 
             Console.ResetColor();
 
-            Console.WriteLine("Would you like a tutorial?");
+            Console.WriteLine("Would you like a tutorial? y or n");
             string input = Console.ReadLine();
 
-            if(input == "y")
-            {
+            if(input == "y") {
                 Console.WriteLine("you have chosen turorial");
-            } else if(input == "n")
-            {
+            } else if(input == "n") {
                 Console.WriteLine("you have chosen not to view the tutorial");
             }
         }
