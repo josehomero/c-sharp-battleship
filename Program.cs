@@ -17,7 +17,7 @@ namespace C_sharp_battleship
             Console.WriteLine("Would you like a tutorial? y or n");
             string input = Console.ReadLine();
 
-            if(input != "y" || "n"){
+            if((input != "y") || (input != "n")){
                 Console.WriteLine("please type in y or n");
             }
 
