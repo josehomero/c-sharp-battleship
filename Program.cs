@@ -18,7 +18,6 @@ namespace C_sharp_battleship
                 {
                     Console.WriteLine("please type in y or n");
                     input = Console.ReadLine();
-
                 }
 
                 if (input == "y")
