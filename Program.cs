@@ -14,10 +14,11 @@ namespace C_sharp_battleship
                 Console.ResetColor();
                 Console.WriteLine("Would you like a tutorial? y or n");
                 string input = Console.ReadLine();
-                while ((input != "y") || (input != "n"))
+                while ((input != "y") && (input != "n"))
                 {
                     Console.WriteLine("please type in y or n");
                     input = Console.ReadLine();
+
                 }
 
                 if (input == "y")
