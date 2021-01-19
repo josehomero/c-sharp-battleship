@@ -48,6 +48,8 @@ namespace C_sharp_battleship
                 {
                     Console.WriteLine("you have chosen not to view the tutorial");
                 }
+
+                Console.WriteLine("The game");
             }
 
 
