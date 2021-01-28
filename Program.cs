@@ -73,15 +73,19 @@ namespace C_sharp_battleship
                     if(xInput != null)
                     {
                         Console.WriteLine("Choose a number from 0-10 for y axis coordinate:");
-                        string yInput = Console.ReadLine();
+                        
                     }
+                    string yInput = Console.ReadLine();
 
                     int xAnswer = 6;
                     int yAnswer = 6;
 
-                    if((xInput == xAnswer) && (xInput == yAnswer))
+                    if((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
                     {
                         Console.WriteLine("Direct hit!");
+                    } else if ((Int32.Parse(xInput) != xAnswer) && (Int32.Parse(yInput) != yAnswer))
+                    {
+                        Console.WriteLine("you missed!");
                     }
                 }
             }
