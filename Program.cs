@@ -68,6 +68,21 @@ namespace C_sharp_battleship
                     Console.WriteLine("1  - - - - - - - - - -");
                     Console.WriteLine("0  1 2 3 4 5 6 7 8 9 10\n");
 
+                    Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
+                    string xInput = Console.ReadLine();
+                    if(xInput != null)
+                    {
+                        Console.WriteLine("Choose a number from 0-10 for y axis coordinate:");
+                        string yInput = Console.ReadLine();
+                    }
+
+                    int xAnswer = 6;
+                    int yAnswer = 6;
+
+                    if((xInput == xAnswer) && (xInput == yAnswer))
+                    {
+                        Console.WriteLine("Direct hit!");
+                    }
                 }
             }
 
