@@ -51,42 +51,64 @@ namespace C_sharp_battleship
 
                 Console.WriteLine("______________________");
                 Console.WriteLine("Are you ready to play? Press y to continue to the game");
-                string input2 = Console.ReadLine();
-                if (input2 == "y")
-                {
-                    Console.Clear();
-                    Console.WriteLine("shots remaining = 8, hits = '', Misses = ''\n");
-                    Console.WriteLine("10 - - - - - - - - - -");
-                    Console.WriteLine("9  - - - - - - - - - -");
-                    Console.WriteLine("8  - - - - - - - - - -");
-                    Console.WriteLine("7  - - - - - - - - - -");
-                    Console.WriteLine("6  - - - - - - - - - -");
-                    Console.WriteLine("5  - - - - - - - - - -");
-                    Console.WriteLine("4  - - - - - - - - - -");
-                    Console.WriteLine("3  - - - - - - - - - -");
-                    Console.WriteLine("2  - - - - - - - - - -");
-                    Console.WriteLine("1  - - - - - - - - - -");
-                    Console.WriteLine("0  1 2 3 4 5 6 7 8 9 10\n");
 
-                    Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
-                    string xInput = Console.ReadLine();
-                    if(xInput != null)
+                while (true){
+
+                    string input2 = Console.ReadLine();
+                    if (input2 == "y")
                     {
-                        Console.WriteLine("Choose a number from 0-10 for y axis coordinate:");
+                        Console.Clear();
+                        Console.WriteLine("shots remaining = 8, hits = '', Misses = ''\n");
+                        Console.WriteLine("10 - - - - - - - - - -");
+                        Console.WriteLine("9  - - - - - - - - - -");
+                        Console.WriteLine("8  - - - - - - - - - -");
+                        Console.WriteLine("7  - - - - - - - - - -");
+                        Console.WriteLine("6  - - - - - - - - - -");
+                        Console.WriteLine("5  - - - - - - - - - -");
+                        Console.WriteLine("4  - - - - - - - - - -");
+                        Console.WriteLine("3  - - - - - - - - - -");
+                        Console.WriteLine("2  - - - - - - - - - -");
+                        Console.WriteLine("1  - - - - - - - - - -");
+                        Console.WriteLine("0  1 2 3 4 5 6 7 8 9 10\n");
+
+                        Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
+                        string xInput = Console.ReadLine();
+                        if(xInput != null)
+                        {
+                            Console.WriteLine("Choose a number from 0-10 for y axis coordinate:");
                         
-                    }
-                    string yInput = Console.ReadLine();
+                        }
+                        string yInput = Console.ReadLine();
 
-                    int xAnswer = 6;
-                    int yAnswer = 6;
+                        int xAnswer = 6;
+                        int yAnswer = 6;
 
-                    if((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
-                    {
-                        Console.WriteLine("Direct hit!");
-                    } else if ((Int32.Parse(xInput) != xAnswer) && (Int32.Parse(yInput) != yAnswer))
-                    {
-                        Console.WriteLine("you missed!");
+                        if((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
+                        {
+                            Console.WriteLine("Direct hit!");
+                        } else if ((Int32.Parse(xInput) != xAnswer) && (Int32.Parse(yInput) != yAnswer))
+                        {
+                            Console.WriteLine("you missed!");
+                        }
+
+
                     }
+                    Console.WriteLine("Play again? [y or n]");
+                    string answer = Console.ReadLine();
+
+                    if (answer == "y")
+                    {
+                        continue;
+                    }
+                    else if(answer == "n")
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        return;
+                    }
+
                 }
             }
 
