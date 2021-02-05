@@ -51,8 +51,12 @@ namespace C_sharp_battleship
 
                 Console.WriteLine("______________________");
                 Console.WriteLine("Are you ready to play? Press y to continue to the game");
+                string input2 = Console.ReadLine();
+                if (input2 == "y")
+                {
 
-                bool playAgain = true;
+
+                    bool playAgain = true;
 
                 while (playAgain == true){
 
@@ -60,9 +64,7 @@ namespace C_sharp_battleship
                     int shotsLanded = 2;
                     int shotsMissed = 0;
 
-                    string input2 = Console.ReadLine();
-                    if (input2 == "y")
-                    {
+
                         Console.Clear();
                         Console.WriteLine("shots remaining = {0}, hits = {1}, Misses = {2}\n", shotsLeft, shotsLanded, shotsMissed);
                         Console.WriteLine("10 - - - - - - - - - -");
@@ -101,19 +103,10 @@ namespace C_sharp_battleship
                     Console.WriteLine("Play again? [y or n]");
                     string answer = Console.ReadLine();
 
-                    if (answer == "y")
+                    if (answer == "n")
                     {
-                        continue;
-                    }
-                    else if(answer == "n")
-                    {
-                        return;
-                    }
-                    else
-                    {
-                        return;
-                    }
-
+                        playAgain = false;
+                    } 
                 }
             }
 
