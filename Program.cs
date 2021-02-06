@@ -58,11 +58,12 @@ namespace C_sharp_battleship
 
                     bool playAgain = true;
 
-                while (playAgain == true){
+                    while (playAgain == true)
+                    {
 
-                    int shotsLeft = 8;
-                    int shotsLanded = 2;
-                    int shotsMissed = 0;
+                        int shotsLeft = 8;
+                        int shotsLanded = 2;
+                        int shotsMissed = 0;
 
 
                         Console.Clear();
@@ -81,32 +82,35 @@ namespace C_sharp_battleship
 
                         Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
                         string xInput = Console.ReadLine();
-                        if(xInput != null)
+                        if (xInput != null)
                         {
                             Console.WriteLine("Choose a number from 0-10 for y axis coordinate:");
-                        
+
                         }
                         string yInput = Console.ReadLine();
 
                         int xAnswer = 6;
                         int yAnswer = 6;
 
-                        if((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
+                        if ((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
                         {
                             Console.WriteLine("Direct hit!");
-                        } else if ((Int32.Parse(xInput) != xAnswer) && (Int32.Parse(yInput) != yAnswer))
+                        }
+                        else if ((Int32.Parse(xInput) != xAnswer) && (Int32.Parse(yInput) != yAnswer))
                         {
                             Console.WriteLine("you missed!");
                         }
+
+
+                        Console.WriteLine("Play again? [y or n]");
+                        string answer = Console.ReadLine();
+
+                        if (answer == "n")
+                        {
+                            playAgain = false;
+                        }
+
                     }
-
-                    Console.WriteLine("Play again? [y or n]");
-                    string answer = Console.ReadLine();
-
-                    if (answer == "n")
-                    {
-                        playAgain = false;
-                    } 
                 }
             }
 
