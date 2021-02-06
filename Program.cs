@@ -54,15 +54,13 @@ namespace C_sharp_battleship
                 string input2 = Console.ReadLine();
                 if (input2 == "y")
                 {
-
-
                     bool playAgain = true;
 
                     while (playAgain == true)
                     {
 
                         int shotsLeft = 8;
-                        int shotsLanded = 2;
+                        int shotsLanded = 0;
                         int shotsMissed = 0;
 
 
@@ -80,28 +78,35 @@ namespace C_sharp_battleship
                         Console.WriteLine("1  - - - - - - - - - -");
                         Console.WriteLine("0  1 2 3 4 5 6 7 8 9 10\n");
 
-                        Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
-                        string xInput = Console.ReadLine();
-                        if (xInput != null)
-                        {
-                            Console.WriteLine("Choose a number from 0-10 for y axis coordinate:");
+                        while ((shotsLeft <= 0) || (shotsLanded >= 5)){
+
+                            Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
+                            string xInput = Console.ReadLine();
+                            if (xInput != null)
+                            {
+                                Console.WriteLine("Choose a number from 0-10 for y axis coordinate:");
+
+                            }
+                            string yInput = Console.ReadLine();
+
+                            int xAnswer = 6;
+                            int yAnswer = 6;
+
+                            if ((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
+                            {
+                                Console.WriteLine("Direct hit!");
+                            }
+                            else if ((Int32.Parse(xInput) != xAnswer) && (Int32.Parse(yInput) != yAnswer))
+                            {
+                                Console.WriteLine("you missed!");
+                            }
+
+                            if((xInput != "") && (yInput != ""))
+                            {
+                                shotsLeft -= 1;
+                            }
 
                         }
-                        string yInput = Console.ReadLine();
-
-                        int xAnswer = 6;
-                        int yAnswer = 6;
-
-                        if ((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
-                        {
-                            Console.WriteLine("Direct hit!");
-                        }
-                        else if ((Int32.Parse(xInput) != xAnswer) && (Int32.Parse(yInput) != yAnswer))
-                        {
-                            Console.WriteLine("you missed!");
-                        }
-
-
                         Console.WriteLine("Play again? [y or n]");
                         string answer = Console.ReadLine();
 
