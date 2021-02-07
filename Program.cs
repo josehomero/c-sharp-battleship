@@ -78,7 +78,7 @@ namespace C_sharp_battleship
                         Console.WriteLine("1  - - - - - - - - - -");
                         Console.WriteLine("0  1 2 3 4 5 6 7 8 9 10\n");
 
-                        while ((shotsLeft <= 0) || (shotsLanded >= 5)){
+                        while ((shotsLeft >= 0) || (shotsLanded <= 5)){
 
                             Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
                             string xInput = Console.ReadLine();
@@ -94,6 +94,11 @@ namespace C_sharp_battleship
 
                             if ((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
                             {
+                                shotsLeft--;
+                                shotsLanded++;
+
+                                Console.WriteLine("shots remaining = {0}, hits = {1}, Misses = {2}\n", shotsLeft, shotsLanded, shotsMissed);
+
                                 Console.WriteLine("Direct hit!");
                             }
                             else if ((Int32.Parse(xInput) != xAnswer) && (Int32.Parse(yInput) != yAnswer))
