@@ -61,11 +61,9 @@ namespace C_sharp_battleship
 
                         int shotsLeft = 8;
                         int shotsLanded = 0;
-                        int shotsMissed = 0;
-
 
                         Console.Clear();
-                        Console.WriteLine("shots remaining = {0}, hits = {1}, Misses = {2}\n", shotsLeft, shotsLanded, shotsMissed);
+                        Console.WriteLine("shots remaining = {0}, hits = {1}\n", shotsLeft, shotsLanded);
                         Console.WriteLine("10 - - - - - - - - - -");
                         Console.WriteLine("9  - - - - - - - - - -");
                         Console.WriteLine("8  - - - - - - - - - -");
@@ -78,7 +76,8 @@ namespace C_sharp_battleship
                         Console.WriteLine("1  - - - - - - - - - -");
                         Console.WriteLine("0  1 2 3 4 5 6 7 8 9 10\n");
 
-                        while ((shotsLeft >= 0) || (shotsLanded <= 5)){
+                        while ((shotsLeft >= 0) || (shotsLanded <= 5))
+                        {
 
                             Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
                             string xInput = Console.ReadLine();
@@ -94,22 +93,26 @@ namespace C_sharp_battleship
 
                             if ((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
                             {
-                                shotsLeft--;
-                                shotsLanded++;
+                                --shotsLeft;
+                                ++shotsLanded;
 
-                                Console.WriteLine("shots remaining = {0}, hits = {1}, Misses = {2}\n", shotsLeft, shotsLanded, shotsMissed);
+                                Console.WriteLine("shots remaining = {0}, hits = {1}\n", shotsLeft, shotsLanded);
 
                                 Console.WriteLine("Direct hit!");
                             }
                             else if ((Int32.Parse(xInput) != xAnswer) && (Int32.Parse(yInput) != yAnswer))
                             {
+                                --shotsLeft;
+
+                                Console.WriteLine("shots remaining = {0}, hits = {1}\n", shotsLeft, shotsLanded);
+
                                 Console.WriteLine("you missed!");
                             }
 
-                            if((xInput != "") && (yInput != ""))
-                            {
-                                shotsLeft -= 1;
-                            }
+                            //if((xInput != "") && (yInput != ""))
+                           // {
+                             //   shotsLeft -= 1;
+                            //}
 
                         }
                         Console.WriteLine("Play again? [y or n]");
