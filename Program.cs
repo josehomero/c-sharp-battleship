@@ -59,7 +59,7 @@ namespace C_sharp_battleship
                     while (playAgain == true)
                     {
 
-                        int shotsLeft = 8;
+                        int shotsLeft = 5;
                         int shotsLanded = 0;
 
                         Console.Clear();
@@ -76,7 +76,7 @@ namespace C_sharp_battleship
                         Console.WriteLine("1  - - - - - - - - - -");
                         Console.WriteLine("0  1 2 3 4 5 6 7 8 9 10\n");
 
-                        while ((shotsLeft >= 0) || (shotsLanded <= 5))
+                        while ((shotsLeft > 0) && (shotsLanded < 3))
                         {
 
                             Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
