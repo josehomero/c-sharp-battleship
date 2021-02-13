@@ -88,8 +88,10 @@ namespace C_sharp_battleship
                             }
                             string yInput = Console.ReadLine();
 
-                            int xAnswer = 6;
-                            int yAnswer = 6;
+                            Random random = new Random();
+                            
+                            int xAnswer = random.Next(0, 10);
+                            int yAnswer = random.Next(0, 10);
 
                             if ((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
                             {
