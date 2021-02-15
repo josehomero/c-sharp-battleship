@@ -81,6 +81,7 @@ namespace C_sharp_battleship
 
                             Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
                             string xInput = Console.ReadLine();
+
                             if (xInput != null)
                             {
                                 Console.WriteLine("Choose a number from 0-10 for y axis coordinate:");
@@ -90,10 +91,15 @@ namespace C_sharp_battleship
 
                             Random random = new Random();
                             
-                            int xAnswer = random.Next(0, 10);
-                            int yAnswer = random.Next(0, 10);
+                            int xAnswer1 = random.Next(0, 10);
+                            int yAnswer1 = random.Next(0, 10);
 
-                            if ((Int32.Parse(xInput) == xAnswer) && (Int32.Parse(yInput) == yAnswer))
+                            int xAnswer2 = random.Next(0, 10);
+                            int yAnswer2 = random.Next(0, 10);
+
+
+
+                            if ((Int32.Parse(xInput) == xAnswer1) && (Int32.Parse(yInput) == yAnswer1))
                             {
                                 --shotsLeft;
                                 ++shotsLanded;
@@ -102,7 +108,7 @@ namespace C_sharp_battleship
 
                                 Console.WriteLine("Direct hit!");
                             }
-                            else if ((Int32.Parse(xInput) != xAnswer) && (Int32.Parse(yInput) != yAnswer))
+                            else
                             {
                                 --shotsLeft;
 
@@ -111,9 +117,10 @@ namespace C_sharp_battleship
                                 Console.WriteLine("you missed!");
                             }
 
+                           
                             //if((xInput != "") && (yInput != ""))
-                           // {
-                             //   shotsLeft -= 1;
+                            // {
+                            //   shotsLeft -= 1;
                             //}
 
                         }
