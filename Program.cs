@@ -97,7 +97,14 @@ namespace C_sharp_battleship
                             int xAnswer2 = random.Next(0, 10);
                             int yAnswer2 = random.Next(0, 10);
 
+                            int xAnswer3 = random.Next(0, 10);                            
+                            int yAnswer3 = random.Next(0, 10);
+                            
+                            int xAnswer4 = random.Next(0, 10);
+                            int yAnswer4 = random.Next(0, 10);
 
+                            int xAnswer5 = random.Next(0, 10);
+                            int yAnswer5 = random.Next(0, 10);
 
                             if ((Int32.Parse(xInput) == xAnswer1) && (Int32.Parse(yInput) == yAnswer1))
                             {
@@ -108,6 +115,43 @@ namespace C_sharp_battleship
 
                                 Console.WriteLine("Direct hit!");
                             }
+                            else if((Int32.Parse(xInput) == xAnswer2) && (Int32.Parse(yInput) == yAnswer2))
+                            {
+                                --shotsLeft;
+                                ++shotsLanded;
+
+                                Console.WriteLine("shots remaining = {0}, hits = {1}\n", shotsLeft, shotsLanded);
+
+                                Console.WriteLine("Direct hit!");
+                            }
+                            else if ((Int32.Parse(xInput) == xAnswer3) && (Int32.Parse(yInput) == yAnswer3))
+                            {
+                                --shotsLeft;
+                                ++shotsLanded;
+
+                                Console.WriteLine("shots remaining = {0}, hits = {1}\n", shotsLeft, shotsLanded);
+
+                                Console.WriteLine("Direct hit!");
+                            }
+                            else if ((Int32.Parse(xInput) == xAnswer4) && (Int32.Parse(yInput) == yAnswer4))
+                            {
+                                --shotsLeft;
+                                ++shotsLanded;
+
+                                Console.WriteLine("shots remaining = {0}, hits = {1}\n", shotsLeft, shotsLanded);
+
+                                Console.WriteLine("Direct hit!");
+                            }
+                            else if ((Int32.Parse(xInput) == xAnswer5) && (Int32.Parse(yInput) == yAnswer5))
+                            {
+                                --shotsLeft;
+                                ++shotsLanded;
+
+                                Console.WriteLine("shots remaining = {0}, hits = {1}\n", shotsLeft, shotsLanded);
+
+                                Console.WriteLine("Direct hit!");
+                            }
+
                             else
                             {
                                 --shotsLeft;
@@ -116,12 +160,6 @@ namespace C_sharp_battleship
 
                                 Console.WriteLine("you missed!");
                             }
-
-                           
-                            //if((xInput != "") && (yInput != ""))
-                            // {
-                            //   shotsLeft -= 1;
-                            //}
 
                         }
                         Console.WriteLine("Play again? [y or n]");
