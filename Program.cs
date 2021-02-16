@@ -37,7 +37,7 @@ namespace C_sharp_battleship
                     Console.WriteLine("1  - - - - - - - - - -");
                     Console.WriteLine("0  1 2 3 4 5 6 7 8 9 10\n");
 
-                    Console.WriteLine("Once the point is selected you will be promped with a hit or a miss.You will be given a total of 3" +
+                    Console.WriteLine("Once the point is selected you will be promped with a hit or a miss.You will be given a total of 8" +
                         " guesses. if you do not destroy the enemy vessel... You are probably a fit for the 1588 spanish armado and lose " +
                         "the game. However if you annihilate the enenmy which takes up 5 grid spaces you win After which you can gloat " +
                         "to your friends and family, and garner the respect of your peers " +
@@ -59,7 +59,7 @@ namespace C_sharp_battleship
                     while (playAgain == true)
                     {
 
-                        int shotsLeft = 5;
+                        int shotsLeft = 8;
                         int shotsLanded = 0;
 
                         Console.Clear();
@@ -76,11 +76,17 @@ namespace C_sharp_battleship
                         Console.WriteLine("1  - - - - - - - - - -");
                         Console.WriteLine("0  1 2 3 4 5 6 7 8 9 10\n");
 
-                        while ((shotsLeft > 0) && (shotsLanded < 3))
+                        while ((shotsLeft > 0) && (shotsLanded < 5))
                         {
 
                             Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
                             string xInput = Console.ReadLine();
+
+                            while (xInput < 0)
+                            {
+                                Console.WriteLine("please type in a number between 0 -10");
+                                xInput = Console.ReadLine();
+                            }
 
                             if (xInput != null)
                             {
@@ -94,8 +100,8 @@ namespace C_sharp_battleship
                             int xAnswer1 = random.Next(0, 10);
                             int yAnswer1 = random.Next(0, 10);
 
-                            int xAnswer2 = random.Next(0, 10);
-                            int yAnswer2 = random.Next(0, 10);
+                            int xAnswer2 = 2;
+                            int yAnswer2 = 2;
 
                             int xAnswer3 = random.Next(0, 10);                            
                             int yAnswer3 = random.Next(0, 10);
@@ -162,7 +168,18 @@ namespace C_sharp_battleship
                             }
 
                         }
-                        Console.WriteLine("Play again? [y or n]");
+
+                        if (shotsLeft < 0)
+                        {
+                            Console.WriteLine("Game over");
+                        }
+                        
+                        if(shotsLanded < 5)
+                        {
+                            Console.WriteLine("you !won");
+                        }
+
+                            Console.WriteLine("Play again? [y or n]");
                         string answer = Console.ReadLine();
 
                         if (answer == "n")
