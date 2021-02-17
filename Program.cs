@@ -13,6 +13,7 @@ namespace C_sharp_battleship
                 Console.WriteLine("{0} by {1}", appName, appAuthor);
                 Console.ResetColor();
                 Console.WriteLine("Would you like a tutorial? y or n");
+                
                 string input = Console.ReadLine();
                 while ((input != "y") && (input != "n"))
                 {
@@ -82,11 +83,12 @@ namespace C_sharp_battleship
                             Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
                             string xInput = Console.ReadLine();
 
-                            while (xInput < 0)
-                            {
-                                Console.WriteLine("please type in a number between 0 -10");
-                                xInput = Console.ReadLine();
-                            }
+                           // while (xInput < 0) while xInput does not 
+                            //{
+                              //  Console.WriteLine("please type in a number between 0 -10");
+                                //xInput = Console.ReadLine();
+                            //}
+
 
                             if (xInput != null)
                             {
@@ -100,8 +102,8 @@ namespace C_sharp_battleship
                             int xAnswer1 = random.Next(0, 10);
                             int yAnswer1 = random.Next(0, 10);
 
-                            int xAnswer2 = 2;
-                            int yAnswer2 = 2;
+                            int xAnswer2 = random.Next(0, 10);
+                            int yAnswer2 = random.Next(0, 10);
 
                             int xAnswer3 = random.Next(0, 10);                            
                             int yAnswer3 = random.Next(0, 10);
@@ -169,12 +171,12 @@ namespace C_sharp_battleship
 
                         }
 
-                        if (shotsLeft < 0)
+                        if (shotsLeft == 0)
                         {
                             Console.WriteLine("Game over");
                         }
                         
-                        if(shotsLanded < 5)
+                        if(shotsLanded == 5)
                         {
                             Console.WriteLine("you !won");
                         }
