@@ -83,11 +83,7 @@ namespace C_sharp_battleship
                             Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
                             string xInput = Console.ReadLine();
 
-                           // while (xInput < 0) while xInput does not 
-                            //{
-                              //  Console.WriteLine("please type in a number between 0 -10");
-                                //xInput = Console.ReadLine();
-                            //}
+                            bool isNumeric = int.TryParse("123", out xInput);
 
 
                             if (xInput != null)
