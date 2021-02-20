@@ -77,14 +77,37 @@ namespace C_sharp_battleship
                         Console.WriteLine("1  - - - - - - - - - -");
                         Console.WriteLine("0  1 2 3 4 5 6 7 8 9 10\n");
 
+                        Random random = new Random();
+
+                        int xAnswer1 = random.Next(0, 10);
+                        int yAnswer1 = random.Next(0, 10);
+
+                        int xAnswer2 = random.Next(0, 10);
+                        int yAnswer2 = random.Next(0, 10);
+
+                        int xAnswer3 = random.Next(0, 10);
+                        int yAnswer3 = random.Next(0, 10);
+
+                        int xAnswer4 = random.Next(0, 10);
+                        int yAnswer4 = random.Next(0, 10);
+
+                        int xAnswer5 = random.Next(0, 10);
+                        int yAnswer5 = random.Next(0, 10);
+
                         while ((shotsLeft > 0) && (shotsLanded < 5))
                         {
 
                             Console.WriteLine("Choose a number from 0-10 for x axis coordinate:");
                             string xInput = Console.ReadLine();
 
-                            bool isNumeric = int.TryParse("123", out xInput);
+                            bool isNumeric = int.TryParse(xInput, out _);
 
+                            while(isNumeric == false)
+                            {
+                                Console.WriteLine("Please choose a numeric value between 0-10");
+                                xInput = Console.ReadLine();
+                                isNumeric = int.TryParse(xInput, out _);
+                            }
 
                             if (xInput != null)
                             {
@@ -92,23 +115,6 @@ namespace C_sharp_battleship
 
                             }
                             string yInput = Console.ReadLine();
-
-                            Random random = new Random();
-                            
-                            int xAnswer1 = random.Next(0, 10);
-                            int yAnswer1 = random.Next(0, 10);
-
-                            int xAnswer2 = random.Next(0, 10);
-                            int yAnswer2 = random.Next(0, 10);
-
-                            int xAnswer3 = random.Next(0, 10);                            
-                            int yAnswer3 = random.Next(0, 10);
-                            
-                            int xAnswer4 = random.Next(0, 10);
-                            int yAnswer4 = random.Next(0, 10);
-
-                            int xAnswer5 = random.Next(0, 10);
-                            int yAnswer5 = random.Next(0, 10);
 
                             if ((Int32.Parse(xInput) == xAnswer1) && (Int32.Parse(yInput) == yAnswer1))
                             {
