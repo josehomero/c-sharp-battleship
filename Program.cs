@@ -112,9 +112,18 @@ namespace C_sharp_battleship
                             if (xInput != null)
                             {
                                 Console.WriteLine("Choose a number from 0-10 for y axis coordinate:");
-
                             }
+
                             string yInput = Console.ReadLine();
+                            bool isNumericY = int.TryParse(yInput, out _);
+
+                            while (isNumericY == false)
+                            {
+                                Console.WriteLine("Please choose a numeric value between 0-10");
+                                yInput = Console.ReadLine();
+                                isNumericY = int.TryParse(yInput, out _);
+                            }
+
 
                             if ((Int32.Parse(xInput) == xAnswer1) && (Int32.Parse(yInput) == yAnswer1))
                             {
